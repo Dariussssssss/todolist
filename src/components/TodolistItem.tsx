@@ -14,14 +14,12 @@ export const TodolistItem = ({title, tasks, date}: ListItemProps) => {
 
 
     return (
-        <div className="app">
-            <div>
+        <div>
                 <TodolistTitle title={title}/>
                 <AddTaskForm/>
                 <TodotaskList tasks={tasks}/>
                 <FilterButtons/>
                 <div>{date}</div>
-            </div>
         </div>
     )
 }

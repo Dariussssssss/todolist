@@ -7,16 +7,16 @@ type TodotaskList = {
 
 export const TodotaskList = ({tasks}: TodotaskList) => {
     const mappedTasks = tasks.length === 0 ?
-        (<p>Tasks list is empty</p>) : (<ul>
-            {tasks.map((task: TaskProps) => {
+        (<p>Tasks list is empty</p>) : (
+            tasks.map((task: TaskProps) => {
                 return (
                     <Tasks key={task.id} title={task.title} isDone={task.isDone}/>
                 )
-            })}
-        </ul>)
+            })
+        )
     return (
-        <div>
+        <ul>
             {mappedTasks}
-        </div>
+        </ul>
     );
 };
